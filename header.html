@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -32,15 +33,13 @@
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                     <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categories <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Furniture</a></li>
-                        <li><a href="#">Vehicle</a></li>
-                        <li><a href="#">Home Appliances</a></li>
-                        <li><a href="#">Gadgets</a></li>
-                  
-                    </ul>
-                </li>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#category">Category</a></li>
+                             <li><a data-toggle="tab" href="#category">Category2</a></li>
+
+                        </ul>            
+                    </li>1
+          
             </ul>
             <form class="navbar-form navbar-left">
             	<div class="input-group">
@@ -56,7 +55,18 @@
                 <li><a href="#">Login/Sign-Up</a></li>
             </ul>
         </div>
-    </nav>
+
+   </nav>
+   <div id="category" class="tab-pane fade in active" style="background-color: white">
+    <ul id="uldiv2">
+        <li class="lidiv2"><a href="#home">Home</a></li>
+        <li class="lidiv2"><a href="#news">News</a></li>
+        <li class="lidiv2"><a href="#contact">Contact</a></li>
+        <li class="lidiv2"><a href="#about">About</a></li>
+    </ul>
+            
+        </div>
 </div>
+
 </body>
 </html>                                		
