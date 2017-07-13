@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.row > div{
+        margin-bottom: 15px;
+    }
+	.header{
+        min-height: 50px;
+    }
+    .footer{
+        min-height: 30px;
+    }
+    .header, .footer{
+        background: #2f2f2f;
+    }
+    .sidebar{
+        background: #dbdfe5;
+    }
+    .intro{
+        background: #7e8aa0;
+        min-height: 250px;
+    }
+    .section{
+        min-height: 150px;
+        background: #dbdfe5;
+    }
+    .section.bg-alt{
+        background: #b4bac0;
+    }
+
+    .panel-body{
+        padding: 5px;
+    }
+</style>
+
+
+</script>
+</head>
+<body>
+	<!-- Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the browser window to understand how the Bootstrap responsive grid system works. -->
+     <nav class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand" style="margin-left: 10px">Brand</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categories <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Furniture</a></li>
+                        <li><a href="#">Vehicle</a></li>
+                        <li><a href="#">Home Appliances</a></li>
+                        <li><a href="#">Gadgets</a></li>
+                  
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right" >
+
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 10px">
+                <li><a href="#">Login/Sign-Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+	<div class="container">
+    	
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="intro">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="section">
+                    <div class="panel panel-default">
+        <div class="panel-heading">Filter <span class="glyphicon glyphicon-filter"></span></div>
+        <div class="panel-body">
+            <h6>Price Range</h6>
+            <input type="range" id="price-range" value="1000"><hr>
+
+        <h6>City</h6>
+        <div class="input-group">
+            <input list="city" name="city" type="text" class="form-control" placeholder="City">
+            <datalist id="city">
+            <option value="Mumbai">
+            <option value="Nagpur">
+            <option value="Pune">
+            <option value="Thane">
+            <option value="Nashik">
+            <option value="Aurangabad">
+            <option value="Solapur">
+            <option value="Thane">
+            <option value="Palghar">
+            <option value="Thane">
+            <option value="Kolhapur">
+            <option value="Akola">
+            <option value="Raigad">
+
+
+            </datalist>
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div><hr>  
+   
+           
+
+        </div>
+    </div>
+                </div>
+            </div>
+
+
+        <div class="col-sm-6 col-md-8">
+            <div class="section bg-alt">
+                <div class="row">
+            <div class="col-md-6">
+                <div class="demo-content" style="background-color: red">.col-sm-6</div>
+            </div>
+            <div class="col-md-6">
+                <div class="demo-content bg-alt" style="background-color: blue">.col-sm-6</div>
+            </div>
+        </div>
+        <hr>
+        <!--Row with two columns divided in 1:2 ratio-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="demo-content" style="background-color: blue">.col-sm-4</div>
+            </div>
+            <div class="col-md-6">
+                <div class="demo-content bg-alt" style="background-color: red">.col-sm-8</div>
+            </div>
+        </div>
+        <hr>
+        <!--Row with two columns divided in 1:3 ratio-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="demo-content" style="background-color: red">.col-sm-3</div>
+            </div>
+            <div class="col-md-6">
+                <div class="demo-content bg-alt" style="background-color: blue">.col-sm-9</div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer"></div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>                                		

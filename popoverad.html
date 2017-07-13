@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        placement : 'right'
+    });
+});
+</script>
+<style type="text/css">
+	.bs-example{
+    	margin: 150px 50px;
+    }
+	.popover-demo{
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="popover-demo">
+      <button type="button" class="btn btn-success" data-toggle="popover" data-trigger="focus" data-placement="right" title="Contact Person" data-content="
+      Popover on right.">Popover on right</button>
+    </div>
+</body>
+</html>                                		
