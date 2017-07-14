@@ -7,71 +7,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style type="text/css">
-	.row > div{
-        margin-bottom: 15px;
-    }
-	.header{
-        min-height: 50px;
-    }
-    .footer{
-        min-height: 30px;
-    }
-    .header, .footer{
-        background: #2f2f2f;
-    }
-    .sidebar{
-        background: #dbdfe5;
-    }
-    .intro{
-        background: #7e8aa0;
-        min-height: 250px;
-    }
-    .section{
-        min-height: 150px;
-        background: #dbdfe5;
-    }
-    .section.bg-alt{
-        background: #b4bac0;
-    }
-
-    .panel-body{
-        padding: 5px;
-    }
-
-
-    .carousel{
-        background: #2f4357;
-        margin-top: 20px;
-    }
-    .carousel .item{
-        min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
-    }
-    
-    .carousel .item img{
-        margin: 0 auto; /* Align slide image horizontally center */
-    }
-
-    .img-wrapper {
-        position: relative;
-    }
-
-    .img-overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-    }
-
-.img-overlay:before {
-  content: ' ';
-  display: block;
-  height: 50%;
-}
-
-   
+	
 
 
 </style>
@@ -89,7 +27,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right" style="margin-right: 170px">
                 <li><a href="#"><span span class="glyphicon glyphicon-heart"></span><b>Giveaway</b></a></li>
-                <li><a href="#"><span span class="glyphicon glyphicon-earphone"></span><b>Contect Us</b></a></li>
+                <li><a href="#"><span span class="glyphicon glyphicon-earphone"></span><b>Contact Us</b></a></li>
             </ul>
         </div>
     </nav>
@@ -114,7 +52,7 @@
                     <li class="dropdown">
                     <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#category">Category</a></li>
-                             <li><a data-toggle="tab" href="#category">Category2</a></li>
+                             <li><a data-toggle="tab" href="#category2">Category2</a></li>
 
                         </ul>  
                 </li>
@@ -130,10 +68,12 @@
             <ul class="nav navbar-nav navbar-right" >
 
             <ul class="nav navbar-nav navbar-right" style="margin-right: 10px">
-                <li><a href="#">Login/Sign-Up</a></li>
+                <li><button class="btn btn-primary" data-toggle="modal" data-target="#login" style="margin-top: 8px">Sign In/Sign Up</button></li>
             </ul>
         </div>
     </nav>
+
+    <div class="tab-content">
 
     <div id="category" class="tab-pane fade in active" style="background-color: white">
         <ul id="uldiv2">
@@ -142,13 +82,24 @@
             <li class="lidiv2"><a href="#mobiles">Mobiles</a></li>
             <li class="lidiv2"><a href="#about">Electronic Appliances</a></li>
             <li class="lidiv2"><a href="#cars">Bikes</a></li>
-            <li class="lidiv2"><a href="#cars">Furniture</a></li>
+            <li class="lidiv2"><a id="cat1" href="#cars">Furniture</a></li>
             <li class="lidiv2"><a href="#cars">Books&Hobbies</a></li>
 
 
         </ul>
             
     </div>
+    <div id="category2" class="tab-pane fade" style="background-color: white">
+              <ul id="uldiv2">
+                <li class="lidiv2"><a href="#home">Hme</a></li>
+                <li class="lidiv2"><a href="#news">Nws</a></li>
+                <li class="lidiv2"><a href="#contact">Cntact</a></li>
+                <li class="lidiv2"><a href="#about">Abt</a></li>
+            </ul>
+    </div>
+    </div>
+    <!-- Carousel for new ads -->
+
     	
         <div class="row">
             <div class="col-sm-12">
@@ -194,88 +145,253 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-md-4">
                 <div class="section">
                     <div class="panel panel-default">
-        <div class="panel-heading">Filter <span class="glyphicon glyphicon-filter"></span></div>
-        <div class="panel-body">
-            <h6>Price Range</h6>
-            <input type="range" id="price-range" value="1000"><hr>
+                        <div class="panel-heading">Filter <span class="glyphicon glyphicon-filter"></span></div>
+                            <div class="panel-body">
 
-        <h6>City</h6>
-        <div class="input-group">
-            <input list="city" name="city" type="text" class="form-control" placeholder="City">
-            <datalist id="city">
-            <option value="Mumbai">
-            <option value="Nagpur">
-            <option value="Pune">
-            <option value="Thane">
-            <option value="Nashik">
-            <option value="Aurangabad">
-            <option value="Solapur">
-            <option value="Thane">
-            <option value="Palghar">
-            <option value="Thane">
-            <option value="Kolhapur">
-            <option value="Akola">
-            <option value="Raigad">
+                                <!-- Price Range -->
+                                <hr>
+                                <h6 Price Range</h6>
+                                <input type="range" id="price-range" value="1000"><hr>
+
+                                <!-- Filter for city -->
+
+                                <h6>City</h6>
+                                <div class="input-group">
+                                    <input list="city" name="city" type="text" class="form-control" placeholder="City">
+                                    <datalist id="city">
+                                        <option value="Mumbai">
+                                        <option value="Nagpur">
+                                        <option value="Pune">
+                                        <option value="Thane">
+                                        <option value="Nashik">
+                                        <option value="Aurangabad">
+                                        <option value="Solapur">
+                                        <option value="Thane">
+                                        <option value="Palghar">
+                                        <option value="Thane">
+                                        <option value="Kolhapur">
+                                        <option value="Akola">
+                                        <option value="Raigad">
+                                    </datalist>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                                    </span>
+                                </div>
+                                <hr>          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Advertisement Division -->
 
 
-            </datalist>
-            <span class="input-group-btn">
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-            </span>
-        </div><hr>  
-   
-           
+<div class="col-md-8">
+    <div class="section bg-alt">
+        <div class="row" style="padding-top: 30px">
 
-        </div>
-    </div>
+            <div class="col-md-4">
+                <div class="demo-content" >
+                    <div class="gallery">
+                        <div class="well">
+                            <img src="sofa.jpg" alt="sofa" width="300" height="200">
+                        </div>
+  
+                        <div class="desc">
+                            <p style="font-size: 20px;"><b>Three Seater Sofa</b></p>
+                            <p style="font-size: 20px;color: red;">Rs.4500</p>
+                            <a href="#">Heet Palod </a><small>14<sup>th</sup> July 2017</small> 
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
-        <div class="col-sm-6 col-md-8">
-            <div class="section bg-alt">
-                <div class="row">
-            <div class="col-md-6">
-                <div class="demo-content" style="background-color: red">.col-sm-6</div>
+            <div class="col-md-4">
+                <div class="demo-content bg-alt">
+                    <div class="gallery">
+                        <div class="well">
+                            <img src="bed.jpg" alt="bed" width="300" height="200">
+                        </div>
+  
+                        <div class="desc">
+                            <p style="font-size: 20px;"><b>Queen Size Bed</b></p>
+                            <p style="font-size: 20px;color: red;">Rs.8800</p>
+                            <a href="#">Atul </a><small>11<sup>th</sup> January 2017</small> 
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="demo-content bg-alt" style="background-color: blue">.col-sm-6</div>
+             <div class="col-md-4">
+                <div class="demo-content bg-alt">
+                    <div class="gallery">
+                        <div class="well">
+                            <img src="bed.jpg" alt="bed" width="300" height="200">
+                        </div>
+  
+                        <div class="desc">
+                            <p style="font-size: 20px;"><b>Queen Size Bed</b></p>
+                            <p style="font-size: 20px;color: red;">Rs.8800</p>
+                            <a href="#">Atul </a><small>11<sup>th</sup> January 2017</small> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <hr>
-        <!--Row with two columns divided in 1:2 ratio-->
+      
         <div class="row">
-            <div class="col-md-6">
-                <div class="demo-content" style="background-color: blue">.col-sm-4</div>
+
+            <div class="col-md-4">
+                <div class="demo-content" >
+                    <div class="gallery">
+                        <div class="well">
+                            <img src="bike.jpg" alt="bed" width="300" height="200">
+                        </div>
+  
+                        <div class="desc">
+                            <p style="font-size: 20px;"><b>Bullete</b></p>
+                            <p style="font-size: 20px;color: red;">Rs.66800</p>
+                            <a href="#">Aditya</a><small>11<sup>th</sup> January 2017</small> 
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="demo-content bg-alt" style="background-color: red">.col-sm-8</div>
+
+            <div class="col-md-4">
+                <div class="demo-content bg-alt">
+                    <div class="gallery">
+                        <div class="well">
+                            <img src="chairs.jpg" alt="bed" width="300" height="200">
+                        </div>
+  
+                        <div class="desc">
+                            <p style="font-size: 20px;"><b>Set of 8 Chairs</b></p>
+                            <p style="font-size: 20px;color: red;">Rs.668</p>
+                            <a href="#">Ross</a><small>10<sup>th</sup> December 2016</small> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="demo-content bg-alt">
+                    <div class="gallery">
+                        <div class="well">
+                            <img src="chairs.jpg" alt="bed" width="300" height="200">
+                        </div>
+  
+                        <div class="desc">
+                            <p style="font-size: 20px;"><b>Set of 8 Chairs</b></p>
+                            <p style="font-size: 20px;color: red;">Rs.668</p>
+                            <a href="#">Ross</a><small>10<sup>th</sup> December 2016</small> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <hr>
         <!--Row with two columns divided in 1:3 ratio-->
-        <div class="row">
-            <div class="col-md-6">
-                <div class="demo-content" style="background-color: red">.col-sm-3</div>
-            </div>
-            <div class="col-md-6">
-                <div class="demo-content bg-alt" style="background-color: blue">.col-sm-9</div>
-            </div>
-        </div>
+        
     </div>
             </div>
         </div>
             
         </div>
+        <!-- Footer -->
 
         <div class="row">
             <div class="col-sm-12">
                 <div class="footer"></div>
             </div>
         </div>
-	</div>
+</div>
+
+<!-- Login Page -->
+
+<div id="login" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div style="padding: 20px; margin-left: 50px; margin-right: 50px">
+                        <h3>Login with your E-mail</h3><hr>
+                        <p><input type="input" name="username" placeholder="E-mail" class="form-control"></p>
+                        <p><input type="password" name="password" placeholder="Password" class="form-control"></p>
+                        <p style="text-align: center;"><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#password-reset"><small><u>Forgot Password?</u></small></a></p>
+                        <p><button type="button" class="btn btn-success btn-lg btn-block" data-target="#" data-dismiss="modal">Sign In</button></p>
+                        <p style="text-align: center;">Not Registered yet?</p>
+                        <p style="text-align: center;"><u><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#register">Register Here</a></u></p>
+
+                    </div>
+                    
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+
+
+    <div id="register" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div style="padding: 20px; margin-left: 50px; margin-right: 50px">
+
+                        <div class="row">
+                            <h3>Register Here</h3><hr>
+
+                            <div class="col-md-6">
+                                <p><input type="input" name="firstname" placeholder="First Name" class="form-control"></p>
+                                <p><input type="password" name="City" placeholder="City" class="form-control"></p>
+
+                            </div>
+                            <div class="col-md-6">
+                                <p><input type="password" name="lastname" placeholder="Last Name" class="form-control"></p>
+                                <p><input type="password" name="contact" placeholder="Contact Number" class="form-control"></p>
+                            </div>
+
+                        </div>              
+                            <hr>
+                            <p><input type="input" name="register-email" placeholder="Enter E-Mail" class="form-control"></p>
+                            <p><input type="input" name="register-password" placeholder="Enter Password" class="form-control"></p>
+                            <p><input type="input" name="confirm-password" placeholder="Confirm Password" class="form-control"></p>
+                            <p><button type="button" class="btn btn-success btn-lg btn-block" data-target="#" data-dismiss="modal">Register</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Password Reset Modal -->
+
+    <div id="password-reset" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">      
+                        <h3>Password Reset</h3>
+                        <hr>
+                        <p><input type="input" name="forgot-password-email" placeholder="Enter your registered E-Mail" class="form-control"></p>
+                        <p><button type="button" class="btn btn-success btn-lg btn-block" data-target="#" data-dismiss="modal">Reset Password</button></p>                 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+  
+     
+     
 </body>
 </html>                                		
