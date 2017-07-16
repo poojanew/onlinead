@@ -13,10 +13,6 @@
 
 </style>
 
-<script type="text/javascript">
- 
-</script>
-
 
 </script>
 </head>
@@ -68,9 +64,22 @@
             </form>
             <ul class="nav navbar-nav navbar-right" >
 
-            <ul class="nav navbar-nav navbar-right" style="margin-right: 10px">
-                 <li><button onclick="document.location.href='postad.html'" id="postad" class="btn btn-primary" data-target="#" style="margin-top: 8px; margin-right: 5px">Post Ad</button></li>
-                <li><button class="btn btn-primary" data-toggle="modal" data-target="#login" style="margin-top: 8px">Sign In/Up</button></li>
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 20px;margin-top:10px">
+                <li>
+                    <div class="dropdown">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <a data-target="#" href="page.html" data-toggle="dropdown" class="dropdown-toggle" style="color: black;">
+                    My Account</a>
+                    
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Deals</a></li>
+                        <li><a href="#">My Post</a></li>
+                        <li><a href="#">My Wishlist</a></li>
+                        <li><a href="home.html">Log Out</a></li>
+
+                    </ul>
+    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -457,8 +466,7 @@
                         <div class="desc">
                             <p style="font-size: 20px;"><b>Three Seater Sofa</b></p>
                             <p style="font-size: 20px;color: red;">Rs.4500</p>
-                            <a href="#">Heet Palod </a><small>14<sup>th</sup> July 2017</small><br><br>
-                            <button onclick="document.location.href='addescription.html'" type="button" class="btn btn-info btn-sm" style="margin-bottom: 20px">View</button>
+                            <a href="#">Heet Palod </a><small>14<sup>th</sup> July 2017</small> 
                         </div>
                     </div>
                 </div>
@@ -474,8 +482,6 @@
                             <p style="font-size: 20px;"><b>Queen Size Bed</b></p>
                             <p style="font-size: 20px;color: red;">Rs.8800</p>
                             <a href="#">Anjali </a><small>11<sup>th</sup> January 2017</small> 
-                            <br><br>
-                            <button onclick="document.location.href='addescription.html'" type="button" class="btn btn-info btn-sm" style="margin-bottom: 20px">View</button>
                         </div>
                     </div>
                 </div>
@@ -491,8 +497,6 @@
                             <p style="font-size: 20px;"><b>Queen Size Bed</b></p>
                             <p style="font-size: 20px;color: red;">Rs.8800</p>
                             <a href="#">Tanu </a><small>11<sup>th</sup> January 2017</small> 
-                            <br><br>
-                            <button onclick="document.location.href='addescription.html'" type="button" class="btn btn-info btn-sm" style="margin-bottom: 20px">View</button>
                         </div>
                     </div>
                 </div>
@@ -512,9 +516,7 @@
                         <div class="desc">
                             <p style="font-size: 20px;"><b>Bullete</b></p>
                             <p style="font-size: 20px;color: red;">Rs.66800</p>
-                            <a href="#">Aditya</a><small>11<sup>th</sup> January 2017</small>
-                            <br><br>
-                            <button onclick="document.location.href='addescription.html'" type="button" class="btn btn-info btn-sm" style="margin-bottom: 20px">View</button> 
+                            <a href="#">Aditya</a><small>11<sup>th</sup> January 2017</small> 
                         </div>
                     </div>
                 </div>
@@ -531,8 +533,6 @@
                             <p style="font-size: 20px;"><b>Set of 8 Chairs</b></p>
                             <p style="font-size: 20px;color: red;">Rs.668</p>
                             <a href="#">Ross</a><small>10<sup>th</sup> December 2016</small> 
-                            <br><br>
-                            <button onclick="document.location.href='addescription.html'" type="button" class="btn btn-info btn-sm" style="margin-bottom: 20px">View</button>
                         </div>
                     </div>
                 </div>
@@ -548,8 +548,6 @@
                             <p style="font-size: 20px;"><b>Set of 8 Chairs</b></p>
                             <p style="font-size: 20px;color: red;">Rs.668</p>
                             <a href="#">Ross</a><small>10<sup>th</sup> December 2016</small> 
-                            <br><br>
-                            <button onclick="document.location.href='addescription.html'" type="button" class="btn btn-info btn-sm" style="margin-bottom: 20px">View</button>
                         </div>
                     </div>
                 </div>
@@ -586,8 +584,7 @@
                         <p><input type="input" name="username" placeholder="E-mail" class="form-control"></p>
                         <p><input type="password" name="password" placeholder="Password" class="form-control"></p>
                         <p style="text-align: center;"><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#password-reset"><small><u>Forgot Password?</u></small></a></p>
-                        <p>
-                        <button id="myButton" onclick="document.location.href='myaccount.html'" type="button" class="btn btn-success btn-lg btn-block" data-target="#" >Sign In</button></p>
+                        <p><button type="button" class="btn btn-success btn-lg btn-block" data-target="#" data-dismiss="modal">Sign In</button></p>
                         <p style="text-align: center;">Not Registered yet?</p>
                         <p style="text-align: center;"><u><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#register">Register Here</a></u></p>
 
@@ -603,58 +600,6 @@
     <!-- Register Modal -->
 
 
-    <div id="register" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                </div>
-                <div class="modal-body">
-                    <div style="padding: 20px; margin-left: 50px; margin-right: 50px">
-
-                        <div class="row">
-                            <h3>Register Here</h3><hr>
-
-                            <div class="col-md-6">
-                                <p><input type="input" name="firstname" placeholder="First Name" class="form-control"></p>
-                                <p><input type="password" name="City" placeholder="City" class="form-control"></p>
-
-                            </div>
-                            <div class="col-md-6">
-                                <p><input type="password" name="lastname" placeholder="Last Name" class="form-control"></p>
-                                <p><input type="password" name="contact" placeholder="Contact Number" class="form-control"></p>
-                            </div>
-
-                        </div>              
-                            <hr>
-                            <p><input type="input" name="register-email" placeholder="Enter E-Mail" class="form-control"></p>
-                            <p><input type="input" name="register-password" placeholder="Enter Password" class="form-control"></p>
-                            <p><input type="input" name="confirm-password" placeholder="Confirm Password" class="form-control"></p>
-                            <p><button type="button" class="btn btn-success btn-lg btn-block" data-target="#" data-dismiss="modal">Register</button></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- Password Reset Modal -->
-
-    <div id="password-reset" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                </div>
-                <div class="modal-body">      
-                        <h3>Password Reset</h3>
-                        <hr>
-                        <p><input type="input" name="forgot-password-email" placeholder="Enter your registered E-Mail" class="form-control"></p>
-                        <p><button type="button" class="btn btn-success btn-lg btn-block" data-target="#" data-dismiss="modal">Reset Password</button></p>                 
-                </div>
-                
-            </div>
-        </div>
-    </div>
 
   
      
